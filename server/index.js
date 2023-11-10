@@ -17,7 +17,6 @@ app.use(
 );
 
 app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/user', userRouter);
 app.use(chatRoute);
 
@@ -41,7 +40,7 @@ mongodb()
 
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'https://chat-app-client-orcin.vercel.app/',
+    origin: 'https://chat-app-client-orcin.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   },
 });
