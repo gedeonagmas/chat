@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['https://gedi-client.vercel.app'],
+    origin: ['https://chat-app-client-swart.vercel.app'],
     methods: ['POST', 'GET', 'PATCH', 'DELETE', 'PUT'],
     credentials: true,
   })
@@ -40,7 +40,7 @@ mongodb()
 
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'https://chat-app-client-orcin.vercel.app',
+    origin: 'https://chat-app-client-swart.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   },
 });
