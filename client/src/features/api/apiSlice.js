@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "https://chat-app-server-eight-snowy.vercel.app",
   }),
   tagTypes: ["get-all-users", "get-history"],
   endpoints: (builder) => ({
