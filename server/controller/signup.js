@@ -1,5 +1,4 @@
 const { Signup } = require("./../models/signupModel");
-const { upload } = require("./../utils/upload");
 const cloudinary = require("./../config/cloudinary");
 
 exports.signupHandler = async (req, res, next) => {
