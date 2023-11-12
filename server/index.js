@@ -21,6 +21,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/user', userRouter);
 app.use(chatRoute);
 
+app.get("/",(req,res)=>{
+  res.send("chat server is running");
+});
+
 mongodb()
   .then(() => {
     const server = app.listen(process.env.PORT, (err) => {
