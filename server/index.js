@@ -83,7 +83,9 @@ mongodb()
         origin: 'https://chat-app-client-dun.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
         credentials: true,
-      }
+      },
+      transports:[ "websocket", "polling" ]
+      
     });
 
     io.on('connection', (socket) => {
