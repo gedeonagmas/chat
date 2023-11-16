@@ -17,7 +17,6 @@ app.use(
 );
 
 app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/user', userRouter);
 app.use(chatRoute);
 
